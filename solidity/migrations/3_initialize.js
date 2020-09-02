@@ -35,5 +35,7 @@ module.exports = async function(deployer, network) {
         {from: operatorContractUpgrader}
     );
 
+    console.log(keepRandomBeaconOperator.address);
+
     await gasPriceOracle.addConsumerContract(keepRandomBeaconOperator.address);
 };
